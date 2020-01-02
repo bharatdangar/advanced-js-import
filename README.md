@@ -1,22 +1,25 @@
 ## INSTALL
 
 ```
-npm install gulp-js-import --save-dev
+npm install advanced-js-import --save-dev
 ```
 ## USAGE
 
-First, install `gulp-js-import` as a devDependency:
+First, install `advanced-js-import` as a devDependency:
 
 Then add it to the gulpfile.js:
 
 
 ```
 var gulp = require('gulp');
-var jsImport = require('gulp-js-import');
+var jsImport = require('advanced-js-import');
 
 gulp.task('import', function() {
   return gulp.src('index.js')
-        .pipe(jsImport({hideConsole: true}))
+        .pipe(jsImport({
+            hideConsole: true,
+            importStack: true
+        }))
         .pipe(gulp.dest('dist'));
 });
 ```
@@ -25,7 +28,7 @@ Final, run import task where you need, eg: `gulp import`
 
 ## DEMO
 
-you can get all code [here](https://github.com/nambo/gulp-js-import)
+you can get all code [here](https://github.com/bharatdangar/advanced-js-import)
 
 ### File Tree
 
@@ -69,7 +72,7 @@ Enter the `demo` directory in command
 ```
 cd demo
 ```
-Install `gulp` `gulp-js-import` 
+Install `gulp` `advanced-js-import` 
 
 ```
 gulp install
